@@ -485,6 +485,7 @@ template {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 .hotel-info__offer {
@@ -517,11 +518,11 @@ template {
   line-height: 15px;
 }
 
-.hotel .stars {
+.stars {
   flex-basis: 100%;
 }
 
-.hotel .offer {
+.offer {
   font-size: 10px;
   line-height: 13px;
   padding: 4px 9px;
@@ -530,7 +531,7 @@ template {
   color: #fff;
 }
 
-.hotel .rating {
+.rating {
   max-width: 65px;
   min-height: 45px;
   text-align: center;
@@ -539,14 +540,63 @@ template {
   border-radius: 4px;
 }
 
-.hotel .rating__text {
+.rating__text {
   font-size: 8px;
   line-height: 10px;
 }
 
-.hotel .rating__counter {
+.rating__counter {
   font-size: 14px;
   line-height: 18px;
+}
+
+.slider {
+  width: 728px;
+}
+
+.swiper {
+  width: 100%;
+  height: 450px;
+  position: relative;
+  border-radius: 8px;
+}
+
+.swiper::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(180deg, rgba(0, 122, 223, 0.48) 0%, rgba(255, 255, 255, 0.128) 100%);
+  z-index: 98;
+}
+
+.swiper-button {
+  top: 50%;
+  width: 30px;
+  height: 30px;
+  border: none;
+  z-index: 99;
+  position: absolute;
+  transform: translateY(-50%);
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10px;
+  background-color: transparent;
+}
+
+.swiper-button--next {
+  right: 18px;
+  background-image: url(../img/arrow-next.svg);
+}
+
+.swiper-button--prev {
+  left: 18px;
+  background-image: url(../img/arrow-prev.svg);
 }
 
 @media (max-width: 1200px) {
@@ -608,7 +658,7 @@ template {
     background-color: #333333;
   }
   .stars {
-    flex-basis: content;
+    flex-basis: auto;
   }
   .hotel-name {
     flex-basis: 100%;
