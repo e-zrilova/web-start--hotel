@@ -529,6 +529,57 @@ template {
   justify-content: space-between;
 }
 
+.hotel-slider {
+  width: 728px;
+  height: 450px;
+}
+
+.hotel-slider__button {
+  top: 50%;
+  width: 30px;
+  height: 30px;
+  border: none;
+  z-index: 99;
+  position: absolute;
+  transform: translateY(-50%);
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10px;
+  background-color: transparent;
+}
+
+.hotel-slider__button--next {
+  right: 18px;
+  background-image: url(../img/arrow-next.svg);
+}
+
+.hotel-slider__button--prev {
+  left: 18px;
+  background-image: url(../img/arrow-prev.svg);
+}
+
+.hotel-slider__item {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.hotel-slider__item::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(180deg, rgba(0, 122, 223, 0.48) 0%, rgba(255, 255, 255, 0.128) 100%);
+  z-index: 98;
+}
+
 .stars {
   flex-basis: 100%;
 }
@@ -559,56 +610,6 @@ template {
 .rating__counter {
   font-size: 14px;
   line-height: 18px;
-}
-
-.slider {
-  width: 728px;
-  height: 450px;
-}
-
-.swiper {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  border-radius: 8px;
-}
-
-.swiper::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: linear-gradient(180deg, rgba(0, 122, 223, 0.48) 0%, rgba(255, 255, 255, 0.128) 100%);
-  z-index: 98;
-}
-
-.swiper-button {
-  top: 50%;
-  width: 30px;
-  height: 30px;
-  border: none;
-  z-index: 99;
-  position: absolute;
-  transform: translateY(-50%);
-  cursor: pointer;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 10px;
-  background-color: transparent;
-}
-
-.swiper-button--next {
-  right: 18px;
-  background-image: url(../img/arrow-next.svg);
-}
-
-.swiper-button--prev {
-  left: 18px;
-  background-image: url(../img/arrow-prev.svg);
 }
 
 .booking {
@@ -799,6 +800,127 @@ template {
   background-color: #EC1F46;
   color: #fff;
   min-width: 65px;
+}
+
+.reviews {
+  padding: 40px 0 70px 0;
+}
+
+.reviews__title {
+  font-family: Mulish;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 45px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 70px;
+}
+
+.reviews-slider__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 8px;
+  margin: 45px auto 0;
+  max-width: 730px;
+  width: 100%;
+  padding: 0 62px 30px;
+  position: relative;
+}
+
+.reviews-slider__item::before {
+  content: '';
+  background-image: url(../img/quote-left.svg);
+  background-repeat: no-repeat;
+  width: 70px;
+  height: 47px;
+  position: absolute;
+  left: 62px;
+  top: 13px;
+}
+
+.reviews-slider__item::after {
+  content: '';
+  background-image: url(../img/quote-right.svg);
+  background-repeat: no-repeat;
+  width: 70px;
+  height: 47px;
+  position: absolute;
+  right: 62px;
+  top: 118px;
+}
+
+.reviews-slider__button {
+  top: 50%;
+  width: 30px;
+  height: 30px;
+  border: none;
+  z-index: 99;
+  position: absolute;
+  transform: translateY(-50%);
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10px;
+  background-color: transparent;
+}
+
+.reviews-slider__button--next {
+  right: 0;
+  background-image: url(../img/arr-next.svg);
+}
+
+.reviews-slider__button--prev {
+  left: 0;
+  background-image: url(../img/arr-prev.svg);
+}
+
+.reviews-slider__profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -45px;
+  margin-bottom: 30px;
+}
+
+.reviews-slider__avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 9px;
+}
+
+.reviews-slider__username {
+  font-family: Mulish;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  color: #EC1F46;
+  margin-bottom: 10px;
+}
+
+.reviews-slider__date {
+  font-family: Mulish;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 13px;
+  margin-bottom: 4px;
+}
+
+.reviews-slider__text {
+  font-family: Mulish;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 160%;
+  text-align: justify;
+  max-width: 539px;
+  width: 100%;
 }
 
 @media (max-width: 1200px) {

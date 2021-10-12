@@ -1,0 +1,96 @@
+.reviews
+  padding: 40px 0 70px 0
+  &__title
+    font-family: Mulish
+    font-style: normal
+    font-weight: bold
+    font-size: 36px
+    line-height: 45px
+    text-align: center
+    text-transform: uppercase
+    margin-bottom: 70px
+  &-slider
+    &__item
+      display: flex
+      flex-direction: column
+      align-items: center
+      background-color: #fff
+      border-radius: 8px
+      margin: 45px auto 0
+      max-width: 730px
+      width: 100%
+      padding: 0 62px 30px
+      position: relative
+      &::before
+        content: ''
+        background-image: url(../img/quote-left.svg)
+        background-repeat: no-repeat
+        width: 70px
+        height: 47px
+        position: absolute
+        left: 62px
+        top: 13px
+      &::after
+        content: ''
+        background-image: url(../img/quote-right.svg)
+        background-repeat: no-repeat
+        width: 70px
+        height: 47px
+        position: absolute
+        right: 62px
+        top: 118px
+    &__button
+      top: 50%
+      width: 30px
+      height: 30px
+      border: none
+      z-index: 99
+      position: absolute
+      transform: translateY(-50%)
+      cursor: pointer
+      background-repeat: no-repeat
+      background-position: center
+      background-size: 10px
+      background-color: transparent
+      &--next
+        right: 0
+        background-image: url(../img/arr-next.svg)
+      &--prev
+        left: 0
+        background-image: url(../img/arr-prev.svg)
+    &__profile
+      display: flex
+      flex-direction: column
+      align-items: center
+      margin-top: -45px
+      margin-bottom: 30px
+    &__avatar
+      width: 90px
+      height: 90px
+      border-radius: 50%
+      object-fit: cover
+      margin-bottom: 9px
+    &__username
+      font-family: Mulish
+      font-style: normal
+      font-weight: bold
+      font-size: 12px
+      line-height: 15px
+      color: $primary
+      margin-bottom: 10px
+    &__date
+      font-family: Mulish
+      font-style: normal
+      font-weight: normal
+      font-size: 10px
+      line-height: 13px
+      margin-bottom: 4px
+    &__text
+      font-family: Mulish
+      font-style: normal
+      font-weight: normal
+      font-size: 12px
+      line-height: 160%
+      text-align: justify
+      max-width: 539px
+      width: 100%
